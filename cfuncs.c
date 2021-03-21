@@ -103,7 +103,7 @@ void primePair(long int max_val)
     }
     count = 0;
   }
-}
+6}
 
 
 float shortDist3D(float start_x, float start_y, float start_z, float end_x, float end_y, float end_z)
@@ -270,6 +270,29 @@ int gcd(int a, int b)
   else
   {
     return gcd(b, a % b);
+  }
+}
+
+void permute(int a[], int i, int len)
+{
+  int j;
+  // base case for recursion
+  if(len == i)
+  {
+    // Print permutation
+    for(j = 0; j < len; j++)
+    {
+      printf("%d ", a[j]);
+    }
+    printf("\n");
+  }
+  for(j = i; j < len; j++)
+  {
+    // swapping the elements to create a new branch of possible permutations
+    swap(a+i, a+j);
+    permute(a, i+1, len);
+    // swapping back to original
+    swap(a+i, a+j);
   }
 }
 

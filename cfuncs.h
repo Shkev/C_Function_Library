@@ -17,6 +17,7 @@ void largeSelecSort(int input[], int size);
 
 //returns the largers of two values
 int max(int num1, int num2);
+
 //finds all prime pairs between 3 and a max value
 void primePair(long int max_val);
 
@@ -68,7 +69,6 @@ int isPalindrome(char* s);
 /*converts a given number, num, to base b,
 *and stores it as a string in s.
 */
-
 void baseChange(char* s, int num, int b);
 
 /* determines if arr contains val. len is the length of the array */
@@ -82,7 +82,12 @@ int arr_min(int arr[], int len);
 /* Recursively finds the greatest common divisor
  * of two numbers, a and b.
 */  
-  int gcd(int a, int b);
+int gcd(int a, int b);
+
+/* Recursively finds all permutations of a given array with length len. 
+* The value of i fixes the first i elements in the given array.
+* Should be 0 if the whole array is to be sorted */
+void permute(int a[], int i, int len);
   
 /*functions to deal with multidimensional arrays (matrices)*/
 
